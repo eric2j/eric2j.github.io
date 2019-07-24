@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.after-1').style.setProperty('animation-play-state', ispause ? 'paused' : '');
         document.querySelector('.after-2').style.setProperty('animation-play-state', ispause ? 'paused' : '');
         document.querySelector('.time').innerHTML = t;
+        if(ispause) beep(200,0.1)
+        if(t==duree) beep(560,0.3)
         if (t == 1) {
             if (!ispause) t = mitemps + 1;
             else t = duree + 1;
@@ -23,14 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-function example4(frequency, type) {
-    o = context.createOscillator()
-    g = context.createGain()
-    o.type = type
-    o.connect(g)
-    o.frequency.value = frequency
-    g.connect(context.destination)
-    o.start(0)
-    g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 1)
+function beep(frequency, delay) {
+      o = context.createOscillator()
+      g = context.createGain()
+      o.type = 'sine'
+      o.connect(g)
+      o.frequency.value = frequency
+      g.connect(context.destination)
+      o.start(0)
+      g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + delay)
 }
