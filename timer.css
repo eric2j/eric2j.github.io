@@ -1,14 +1,13 @@
 html {
-    --main-background: #202020;
-    --main-size: 200px;
-    --main-thickness: 20px;
+    --main-background: #000;
+    --main-size: 300px;
+    --main-thickness: 40px;
     --main-duration: 10s;
     --second-duration: 3s;
-    --main-color: #101010;
+    --main-color: #039be5;
 
     background: var(--main-background);
     text-align: center;
-    padding-top: 36px;
 }
 
 body {
@@ -19,7 +18,7 @@ body {
     height: var(--main-size);
     width: var(--main-size);
     line-height: var(--main-size);
-    color: #404040;
+    color: #ec4e20;
     font-family: Arial, Helvetica, sans-serif;
     font-size: calc(var(--main-size) / 2);
     font-weight: bold;
