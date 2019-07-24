@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.after-1').style.setProperty('animation-play-state', ispause ? 'paused' : '');
         document.querySelector('.after-2').style.setProperty('animation-play-state', ispause ? 'paused' : '');
         document.querySelector('.time').innerHTML = t;
-        if(ispause) beep(200,0.1)
-        if(t==duree) beep(560,0.3)
+        if (ispause) { beep(200,0.1); }
+        if (t==duree) { beep(560,0.3); }
+        
         if (t == 1) {
             if (!ispause) t = mitemps + 1;
             else t = duree + 1;
@@ -23,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     itstime(duree);
 
-});
-
-var context = new AudioContext();
+    var context = new AudioContext();
 
 function beep(frequency, delay) {
       o = context.createOscillator()
@@ -37,3 +36,6 @@ function beep(frequency, delay) {
       o.start(0)
       g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + delay)
 }
+
+});
+
