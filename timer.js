@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+var context = new AudioContext();
+
 function beep(frequency, delay) {
       o = context.createOscillator()
       g = context.createGain()
