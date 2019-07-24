@@ -2,9 +2,9 @@ html {
     --main-background: #000;
     --main-size: 300px;
     --main-thickness: 40px;
-    --main-duration: 10s;
-    --second-duration: 3s;
-    --main-color: #039be5;
+    --main-duration: 30s;
+    --second-duration: 5s;
+    --main-color: #ec4e20;
 
     background: var(--main-background);
     text-align: center;
@@ -18,7 +18,7 @@ body {
     height: var(--main-size);
     width: var(--main-size);
     line-height: var(--main-size);
-    color: #ec4e20;
+    color: #039be5;
     font-family: Arial, Helvetica, sans-serif;
     font-size: calc(var(--main-size) / 2);
     font-weight: bold;
